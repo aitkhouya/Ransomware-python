@@ -1,0 +1,53 @@
+Bonjour tout le monde j'espere que vous allez bien , et merci infiniment d'etre la aujourdhui tout 
+d'abord je tiens a remercier notre cher professeur Mr mehdi iraqui qui nous a encadrer durant 
+ce projet ainsi que  le president Mr mekoaur 
+concerant notre sujet du pfa nous avons opté pour un theme tres interessant c'est le cybercriminalité
+durant lequel nous avons  développer un programme malveillant (ransomware) qui est élaborer par 
+mes camarades ... et moi meme ....
+Pour mieux élaborer on va tout dabord commencer par une petite introduction , ensuite une bref 
+définition concernant ce ransomware , 3eme on va presenter un schéma qui explique l'architecture du
+notre script , puis on va vous simuler une attaque et finalement une petite conclusion avec des 
+perspectives
+----------------------------------------------------------------------------------------------------
+l'histoire de l'escroquerie ne date pas d'hier , elle n'est pas le produit de l'ère 2.0 mais  
+bien avant, ses racines sont avant tout enracinés dans la psychologie humaine. Certes, les moyens
+se sont multipliés avec l'avènement de l'ère technologique ; ils sont devenus plus créatifs,
+plus rusés et plus rénovée avec le développement  humain et informatique donc plusieurs arnaqueurs 
+ont eu recours à  l’hameçonnage phishing ou au programme malveillant RANSOMEWARE qui sera le sujet 
+principal de notre présentation
+----------------------------------------------------------------------------------------------------
+Un ransomware est un type de malware, c’est-à-dire un programme malveillant, qui encrypte des 
+fichiers, voire tout un ordinateur, puis exige une rançon en échange de l’accès aux fichiers ou à 
+l’ordinateur. Les ransomwares utilisent le chiffrement pour bloquer l’accès aux fichiers ou aux 
+ordinateurs infectés rendus inutilisables par la victime. Ils s’attaquent en général à tous les 
+types de fichiers,  qu’il s’agisse de documents personnels ou professionnels.
+Alors pour que ce programme fonctionne on doit se baser sur un algorithme RSA .
+Ce dernier génère deux clés asymétriques privée et publique qui nous permette d’encrypter et de 
+décrypter les donnés
+----------------------------------------------------------------------------------------------------
+RSA est un algorithme asymétrique de cryptographie. Il permet de généré deux différentes clés , 
+une clé public qui est donnée à tout le monde et une clé privé qui est privé (secrète) 
+---------------------------------------------------------------------------------------------------
+Générer la clé : 
+Choisir deux nombres premiers. Supposant P = 3 and Q = 7. maintenant la première partie de la clé publique est : n = P*Q = 21. 
+Φ = (p-1)(q-1) = 2*6 = 12.
+1 < e < Φ e doit être non divisible par Φ. (7)
+Clé : (n,e) =(21,7).
+
+
+ 
+Pour encrypter : 
+
+ c = m^e mod n      Message = m = 4
+   = 16384 mod 21 = 4
+Pour décrypter :
+ 
+ m= c^d mod n       d = e^-1 mod Φ 
+  = 4^7 mod 21	        = e^-1 mod 12 = 7
+  = 16384 mod 21 = 4
+
+------------------------------------------------------------------------------------------------------
+Developper ce malware nous a appris beaucoup de choses sur l'hameçonnage mais surtout comment nous,
+informaticiens de demain, pourrons l’identifier et surtout le prévenir. C’est une tâche difficile
+à laquelle les informaticiens en cyber sécurité devront répondre surtout dans un monde de plus en
+plus digitalisé mais surtout proie à des guerres numériques.
